@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- <script defer src-elem="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script> -->
+  <!-- <script defer src-elem="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #message-container{
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    #message-container div{
+      background-color: #CCC;
+      padding: 5px;
+    }
+
+    #message-container div:nth-child(2n)
+    {
+      background-color: #FFF;
+    }
+
+    #send-container {
+     
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="message-container"></div>
+  <div id="image-container"></div>
+  <form id="send-container">
+    <table>
+      <tr>
+        <td>
+          senderId:<input type="text" id="senderId">
+          <button id="add_user">join</button></td>
+        </tr>
+        <tr>
+          <td>
+            receiverId:<input type="text" id="receiverId">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            conversationId:<input type="text" id="conversationId">
+          </td>
+        </tr>
+        <tr>
+           <td>
+            Message:<input type="text" id="message-input">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Image_File:<input type="file" id="image-input" style="padding:7px;background:#2d2d2d;color:white"name="filename">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="submit" id="send-button" style="padding: 3px 50px;margin:5%;margin-left:15%;">Send</button>
+          </td>
+        </tr> 
+    </table>
+  </form>
+</body>
+</html>
