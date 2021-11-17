@@ -1,7 +1,0 @@
-{
-    "PORT": 3000,
-    "JWT_SECRET": "MyUltraSecurePassWordIWontForgetToChange",
-    "JWT_EXPIRATION_IN_MINUTES": "48000",
-    "MONGO_URI":"mongodb+srv://1cc_user:KPF7lH51Yaxltojn@cluster0.3jh8d.mongodb.net/1CC-DB",
-    "Image_URL":"https://1cc-docs.s3.ap-northeast-2.amazonaws.com/"
-}
